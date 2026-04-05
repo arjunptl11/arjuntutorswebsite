@@ -1,0 +1,102 @@
+{
+  "name": "BookingRequest",
+  "type": "object",
+  "properties": {
+    "student_name": {
+      "type": "string",
+      "title": "Student Name"
+    },
+    "parent_name": {
+      "type": "string",
+      "title": "Parent/Guardian Name"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Phone Number"
+    },
+    "grade_level": {
+      "type": "string",
+      "title": "Grade Level",
+      "enum": [
+        "K",
+        "1st",
+        "2nd",
+        "3rd",
+        "4th",
+        "5th",
+        "6th",
+        "7th",
+        "8th",
+        "9th",
+        "10th",
+        "11th",
+        "12th"
+      ]
+    },
+    "subject": {
+      "type": "string",
+      "title": "Subject",
+      "enum": [
+        "SAT Math",
+        "SAT Reading & Writing",
+        "Math 1",
+        "Math 2",
+        "Math 3",
+        "Precalculus",
+        "Calculus AB",
+        "Calculus BC",
+        "Biology",
+        "K-8 General Academic Support",
+        "Application Support"
+      ]
+    },
+    "session_type": {
+      "type": "string",
+      "title": "Session Type",
+      "enum": [
+        "One-on-One",
+        "Group Session"
+      ]
+    },
+    "format": {
+      "type": "string",
+      "title": "Format",
+      "enum": [
+        "In-Person",
+        "Online",
+        "No Preference"
+      ]
+    },
+    "goals": {
+      "type": "string",
+      "title": "Goals & Notes"
+    },
+    "availability": {
+      "type": "string",
+      "title": "Availability"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "New",
+        "Contacted",
+        "Scheduled",
+        "Completed"
+      ],
+      "default": "New"
+    }
+  },
+  "required": [
+    "student_name",
+    "email",
+    "grade_level",
+    "subject",
+    "session_type"
+  ]
+}
