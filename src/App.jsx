@@ -14,6 +14,7 @@ import Pricing from './pages/Pricing';
 import Booking from './pages/Booking';
 import Contact from './pages/Contact';
 import Testimonials from './pages/Testimonials';
+import ScrollToTop from "./ScrollToTop";
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -63,6 +64,7 @@ function App() {
     <AuthProvider>
       <QueryClientProvider client={queryClientInstance}>
         <Router>
+          <ScrollToTop />
           <AuthenticatedApp />
         </Router>
         <Toaster />
